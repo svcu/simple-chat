@@ -9,6 +9,10 @@ const server = app.listen(app.get("port"), ()=>{
 
 const io = require("socket.io")(server, {cors : {origin : "*"}});
 
+app.get("/", (req, res)=>{
+    res.send("Hi");
+})
+
 io.on('connection', (socket) => {
     console.log(socket.id);
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.set('port', process.env.port);
+app.set('port', process.env.PORT);
 
 const server = app.listen(app.get("port"), ()=>{
     console.log("Server running");
